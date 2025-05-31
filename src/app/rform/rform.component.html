@@ -1,0 +1,14 @@
+<p>Reactive Form</p>
+
+<form [formGroup]='userInfo' (ngSubmit)="submit()">
+    <input type="text" name="name" formControlName="name" placeholder="Enter your name">
+    <input type="password" name="password" formControlName="password" placeholder="Enter your password">
+    <input type="email" name="email" formControlName="email" placeholder="Enter your Email">
+    
+    <div formGroupName="address">
+        <input type="text" name="city" formControlName="city" placeholder="Enter your city">
+        <input type="text" name="zipCide" formControlName="zipCode" placeholder=" Enter you zipCode">
+    </div>
+
+    <button>Save</button>
+</form>

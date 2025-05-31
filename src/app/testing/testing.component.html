@@ -1,0 +1,17 @@
+<p>Hello {{name}}</p>
+<p>{{isAvailable}}</p>
+<p>{{n}}</p>
+<p>{{user.name + " age: " + user.age + " work: " + user.work}}</p>
+
+<p [innerText]="user.name"></p>
+
+<p [class.class1]="isAvailable">Hello from class1 </p>
+
+<p [ngClass]="{'class1': isAvailable, 'class2': !isAvailable}">Hello from ng class1 </p>
+
+<button (click)="changeValue()">Change Style</button>
+
+
+<h1 [style.color]="color" [style.font-size.px]="fontSize">Hello from the style color</h1>
+
+<p [ngStyle]="style">Hello from ng class</p>

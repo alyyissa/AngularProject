@@ -1,0 +1,7 @@
+<p>parent-component works!</p>
+
+<div>
+    <app-child-component *ngFor="let i of arr" [person]="i" (sendId)="accessData($event)"></app-child-component>
+</div>
+
+

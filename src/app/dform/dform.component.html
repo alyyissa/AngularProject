@@ -1,0 +1,9 @@
+<p>dform works!</p>
+
+<form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+    <input type="text" name="username" [(ngModel)]="user.name" placeholder="Enter your name" required>
+    <br>
+    <input type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
+    <br>
+    <button [disabled]="!userForm.valid">Save</button>
+</form>

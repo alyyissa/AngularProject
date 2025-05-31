@@ -1,0 +1,66 @@
+<input type="text" #inputTest>
+
+<button (click)="takeValue(inputTest.value)">Submit</button>
+
+<p>{{y}}</p>
+
+<input type="text" [(ngModel)] ="x">
+
+<p>{{x}}</p>
+
+<!-- ngIF -->
+
+<p *ngIf="isTrue; else elseBlock">hello from the true condition</p>
+
+<ng-template #elseBlock>
+    <p>Hello from suii</p>
+</ng-template>
+
+<button (click)="changeIsTrue()"> Change </button>
+
+<!-- newIf -->
+
+@if (z === 'm3') {
+    <p>Hello from new if block</p>
+}
+@else if (z === 'm2') {
+    <p>newwwwwwwwww</p>
+}
+@else {
+    <p>else condition</p>
+}
+
+<!-- ngSwitch -->
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'"> red color</p>
+    <p *ngSwitchCase="'blue'">blue color</p>
+    <p *ngSwitchCase="'black'">black color</p>
+    <p *ngSwitchDefault>ngSwitchDefault</p>
+</div>
+
+<!-- newSwitch -->
+
+@switch (color) {
+    @case ('red') {
+        <p>Hello from red</p>
+    }
+    @case ('green') {
+        <p>Hello from greeen</p>
+    }
+    @default {
+        <p>Hello from switch default</p>
+    }
+}
+
+<!-- ngFor -->
+<div *ngFor="let i of arr;odd as o;index as x;">
+    <p *ngIf="o">{{x}}-{{o}}</p>
+</div>
+
+<hr>
+<!-- newFor -->
+
+@for (i of arr;track $index;let o = $odd;let total=$count;let last = $last) {
+    <p>{{$index}}-{{i}}</p>
+}
