@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-category-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './category-card.component.css'
 })
 export class CategoryCardComponent {
-
+  @Input() category:any;
 }
