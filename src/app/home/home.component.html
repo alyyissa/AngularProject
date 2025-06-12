@@ -21,6 +21,7 @@
     </button>
   </div>
 </div>
+
 <h3 class="text-center mt-5">Categories</h3>
 
 <div class="container mt-3">
@@ -36,10 +37,11 @@
 </div>
 
 <h3 class="text-center mt-5">Products</h3>
+
 <div class="container mt-3">
   <div class="row justify-content-center gap-3">
     <div class="col-3" *ngFor="let i of products">
-      <div class="card text-center bg-dark">
+      <div class="text-center">
           <app-product-card [item]="i"></app-product-card> 
       </div>
     </div>
